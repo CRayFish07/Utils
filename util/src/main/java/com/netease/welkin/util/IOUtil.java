@@ -9,10 +9,48 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Map;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.netease.live.admin.util.Const;
+import com.netease.live.admin.util.ImageUploadUtil;
+import com.netease.live.admin.vo.ResponseJson;
+import com.netease.live.common.pojo.component.ImageLive;
+import com.netease.live.common.util.JsonUtil;
+
 public class IOUtil {
+	
+    private static Log log = LogFactory.getLog(JsonUtil.class);
+    private static final String UPLOAD_IMAGE_PATH = "";
+    
+	public void uploadNosOrWaterImg(@RequestParam MultipartFile imageFile){
+		try {
+			File dir = new File(UPLOAD_IMAGE_PATH);
+		    File file = new File(dir,imageFile.getOriginalFilename());
+		    if(!dir.getParentFile().exists()){
+	        	dir.mkdirs();
+	        }
+		    if(!file.exists()){
+        		file.createNewFile();
+        	}
+//		......
+			/**
+			 * 此处图片上传到nos服务中，但是穿的过程中服务器必须有一个临时文件
+			 * 为了服务器节省开销，所有删掉服务器的此图片
+			 */
+			if(file.exists()){
+				file.delete();
+			}
+		} catch (Exception e) {
+			log.error(e.getMessage(),e);
+		}
+	}
+	
 	public static byte[] getImgFileToByte(File file) {
 		
         byte[] b = new byte[1024];
