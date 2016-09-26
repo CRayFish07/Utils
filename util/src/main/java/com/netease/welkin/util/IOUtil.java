@@ -17,12 +17,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.netease.live.admin.util.Const;
-import com.netease.live.admin.util.ImageUploadUtil;
-import com.netease.live.admin.vo.ResponseJson;
-import com.netease.live.common.pojo.component.ImageLive;
-import com.netease.live.common.util.JsonUtil;
-
 public class IOUtil {
 	
     private static Log log = LogFactory.getLog(JsonUtil.class);
