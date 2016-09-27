@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.network;
 
 import java.io.IOException;
 import java.io.InputStream;

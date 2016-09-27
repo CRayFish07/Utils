@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.network;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.web;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

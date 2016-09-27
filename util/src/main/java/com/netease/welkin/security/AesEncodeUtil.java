@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.security;
 
 import java.math.BigInteger;
 

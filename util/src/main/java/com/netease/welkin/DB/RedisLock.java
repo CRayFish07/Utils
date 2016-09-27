@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.DB;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,6 +7,8 @@ import org.apache.commons.logging.LogFactory;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+
+import com.netease.welkin.network.SystemThreadUtil;
 
 public class RedisLock {
 	

@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.network;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,20 +14,20 @@ import java.util.regex.Pattern;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
-
 import net.sf.json.JSONObject;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.Page;
 import com.gargoylesoftware.htmlunit.RefreshHandler;
 import com.gargoylesoftware.htmlunit.StringWebResponse;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HTMLParser;
+import com.iminer.ihttpclient.ClientProxyPool;
+import com.iminer.ihttpclient.Proxy;
+import com.iminer.tool.crawler.IminerHtmlUnitDriver;
 
 /**
  * ClassName:Crawler4all Description:

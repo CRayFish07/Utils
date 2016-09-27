@@ -1,4 +1,4 @@
-package com.netease.welkin.util;
+package com.netease.welkin.web;
 
 import java.util.UUID;
 
